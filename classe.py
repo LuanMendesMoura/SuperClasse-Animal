@@ -56,5 +56,3 @@ class Humano(Animal):
     #     self.idade = idade
     #     self.escolaridade = escolaridade
     #     self.ocupacao = ocupacao
-
-# testando novamente meu github
