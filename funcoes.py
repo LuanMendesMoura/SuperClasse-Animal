@@ -31,8 +31,37 @@ def read_humanos(lista_humanos):
         print(f"""\n{index} - Nome: {humano.nome}\n     Cor: {humano.cor}\n     Tamanho: {humano.tamanho} CM
      Peso: {humano.peso} KG\n     Idade: {humano.idade} Anos\n     Escolaridade: {humano.escolaridade}\n     Ocupação: {humano.ocupacao}\n""")
 
-def delete_cachorros(lista_cachorros,op):
-    lista_cachorros.pop(op)
+def upload_cachorros(lista):
+    posicao = int(input("Insira o número do cachorro: "))
+    nome = input(f"|Nome Antigo: {(lista[posicao].nome)}| - Novo Nome: ")
+    cor = input(f"|Cor Antiga: {(lista[posicao].cor)}| - Nova Cor: ")
+    tamanho = int(input(f"|Altura Antiga: {(lista[posicao].altura)}| - Nova Altura em CM: "))
+    peso = float(input(f"|Peso Antigo: {(lista[posicao].peso)}| - Novo Peso em KG: "))
+    idade = int(input(f"|Idade Antiga: {(lista[posicao].idade)}| - Nova Idade: "))
+    raca = input(f"|Raça Antiga: {(lista[posicao].raca)}| - Nova Raça: ")
+    lista[posicao].nome = nome
+    lista[posicao].cor = cor
+    lista[posicao].tamanho = tamanho
+    lista[posicao].peso = peso
+    lista[posicao].idade = idade
+    lista[posicao].raca = raca
 
-def delete_humanos(lista_humanos,op):
-    lista_humanos.pop(op)
+def upload_humanos(lista):
+    posicao = int(input("Insira o número do humano: "))
+    nome = input(f"|Nome Antigo: {(lista[posicao].nome)}| - Novo Nome: ")
+    cor = input(f"|Cor Antiga: {(lista[posicao].cor)}| - Nova Cor: ")
+    tamanho = int(input(f"|Altura Antiga: {(lista[posicao].tamanho)}| - Nova Altura em CM: "))
+    peso = float(input(f"|Peso Antigo: {(lista[posicao].peso)}| - Novo Peso em KG: "))
+    idade = int(input(f"|Idade Antiga: {(lista[posicao].idade)}| - Nova Idade: "))
+    escolaridade = input(f"|Escolaridade Antiga: {(lista[posicao].escolaridade)}| - Nova Escolaridade: ")
+    ocupacao = input(f"|Profissão Antiga: {(lista[posicao].ocupacao)}| - Nova Profissão: ")
+    lista[posicao].nome = nome
+    lista[posicao].cor = cor
+    lista[posicao].tamanho = tamanho
+    lista[posicao].peso = peso
+    lista[posicao].idade = idade
+    lista[posicao].escolaridade = escolaridade
+    lista[posicao].ocupacao = ocupacao
+
+def delete_animal(lista,op):
+    lista.pop(op)

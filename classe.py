@@ -19,7 +19,13 @@ class Animal():
         self.instinto = instinto
 
     def andar(self):
-        print("Andando ")
+        return("Andando ")
+    
+    def dormir(self):
+        return("Dormindo ")
+    
+    def comer(self):
+        return("Comendo ")
 
 class Cachorro(Animal):
     raca = str
@@ -29,18 +35,7 @@ class Cachorro(Animal):
         self.raca = raca
 
     def latir(self):
-        print("Au-au ")
-
-    # def info_cachorro(self):
-    #     return {"nome": self.nome}
-
-    # def atualizar_info_cachorro(self,nome,cor,tamanho,peso,idade,raca):
-    #     self.nome = nome
-    #     self.cor = cor
-    #     self.tamanho = tamanho
-    #     self.peso = peso
-    #     self.idade = idade
-    #     self.raca = raca
+        return("Au-au ")
 
 class Humano(Animal):
     escolaridade = str
@@ -52,13 +47,4 @@ class Humano(Animal):
         self.ocupacao = ocupacao
 
     def cumprimentar(self):
-        print("Olá, tudo bem? ")
-
-    # def atualizar_dados_cachorro(self,nome,cor,tamanho,peso,idade,escolaridade, ocupacao):
-    #     self.nome = nome
-    #     self.cor = cor
-    #     self.tamanho = tamanho
-    #     self.peso = peso
-    #     self.idade = idade
-    #     self.escolaridade = escolaridade
-    #     self.ocupacao = ocupacao
+        return("Olá, tudo bem? ")
