@@ -16,6 +16,8 @@ while close:
             lista_humanos.append(create_humano())
         elif op == "2":
             lista_cachorros.append(create_cachorro()) 
+        else:
+            print("\nOpção não encontrada!\n")
     elif op == "2": 
         print(sub_menu_read())
         op = input("Insira uma opção: ") 
@@ -23,6 +25,8 @@ while close:
             read_humanos(lista_humanos)
         elif op == "2":
             read_cachorros(lista_cachorros)
+        else:
+            print("\nOpção não encontrada!\n")
     elif op == "3":
         print(sub_menu_upload())
         op = input("Insira uma opção: ")
@@ -30,6 +34,8 @@ while close:
             upload_humanos(lista_humanos)
         elif op == "2":
             upload_cachorros(lista_cachorros)
+        else:
+            print("\nOpção não encontrada!\n")
     elif op == "4":
         print(sub_menu_delete())
         op = input("Insira uma opção: ")
@@ -41,6 +47,8 @@ while close:
             read_cachorros(lista_cachorros)
             op = int(input("Insira o número do cachorro: "))
             delete_animal(lista_cachorros,op)
+        else:
+            print("\nOpção não encontrada!\n")
     elif op == "5":    
         print(sub_menu_acoes())
         op = input("Insira uma opção: ")
@@ -64,7 +72,7 @@ while close:
                 humano = int(input("Insira o número do humano: "))
                 f"{print(lista_humanos[humano].nome,":",lista_humanos[humano].comer())}"
             else:
-                pass
+                print("\nOpção não encontrada!\n")
         elif op == "2":
             print(sub_menu_acoes_cachorro())
             op = input("Insira uma opção: ")
@@ -85,6 +93,10 @@ while close:
                 cao = int(input("Insira o número do cachorro: "))
                 f"{print(lista_cachorros[cao].nome,":",lista_cachorros[cao].comer())}"
             else: 
-                pass
+                print("\nOpção não encontrada!\n")
+        else:
+            print("\nOpção não encontrada!\n")
     elif op == "6":
         close = False
+    else:
+        print("\nOpção não encontrada!\n")
